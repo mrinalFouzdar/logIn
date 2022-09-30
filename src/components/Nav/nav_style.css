@@ -1,0 +1,16 @@
+
+.navContainer{
+    padding: 2px 20px;
+    background-color:lightcoral;
+}
+.navUlEle{
+    display: flex;
+
+}
+
+ul{
+    padding: 0%;
+    display: flex;
+    gap: 1vw;
+    list-style-type: none;
+}
