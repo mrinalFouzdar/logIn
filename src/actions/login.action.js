@@ -24,8 +24,8 @@ export const loginUser = (data) => (dispatch) => {
       dispatch(setLoginState(res.data.token));
     })
     .catch((err) => {
-      console.log(err.message);
-      dispatch(setError(err.message));
+      // console.log(err.response.data.errors.password);
+      dispatch(setError(err.response.data.errors.password));
     });
 };
 
