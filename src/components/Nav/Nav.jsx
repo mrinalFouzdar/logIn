@@ -4,11 +4,17 @@ import { Navbar, Container, Nav } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import "./nav_style.css";
 import { logout_user } from "../../actions/login.action";
+import { DataContext } from "../../Contexts/DataContext";
 const Navcmpt = () => {
   const { isLogin } = useSelector((state) => state.token_data);
+  const { handleCustomercod ,secondDataremove} = React.useContext(DataContext);
+
   const dispatch = useDispatch();
   const handleLogout = () => {
     dispatch(logout_user());
+    handleCustomercod("");
+    secondDataremove()
+
   };
   return (
     <Navbar expand="lg" className="navContainer">
